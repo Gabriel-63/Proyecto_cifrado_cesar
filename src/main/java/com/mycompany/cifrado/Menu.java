@@ -252,9 +252,12 @@ public class Menu extends javax.swing.JFrame {
         StringBuilder txtC = new StringBuilder();
         for (int i = 0; i < txt.length(); i++) {
             char c = txt.charAt(i);
-            if (Character.isLetter(c)) {
-                char cif = (char) (((c +(cl-65)) % 26 + 65)-6);
+            if (Character.isUpperCase(c)) {
+                char cif = (char) ((c +(cl-65)) % 26 + 65);
                 txtC.append(cif);
+            }else if (Character.isLowerCase(c)){
+            char cif = (char)(((c + (cl - 97)) % 26) + 97);
+            txtC.append(cif);     
             }else {
                 txtC.append(c); 
             }
@@ -266,10 +269,13 @@ public class Menu extends javax.swing.JFrame {
         StringBuilder txtC = new StringBuilder();
         for (int i = 0; i < txt.length(); i++) {
             char c = txt.charAt(i);
-            if (Character.isLetter(c)) {     
+            if (Character.isUpperCase(c)) {     
                 char des = (char) ((c -(cl-65)) % 26 + 65);
                 txtC.append(des);
-            } else {
+            }else if (Character.isLowerCase(c)){
+            char cif = (char)(((c - (cl+97)) % 26) + 97);
+            txtC.append(cif);  
+            }else {
                 txtC.append(c);
             }
         }

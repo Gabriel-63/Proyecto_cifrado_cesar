@@ -3,3 +3,14 @@ KROD   	HOLA
 HOLA   	KROD
 KROD   	HOLA
 HOLA   	KROD
+HOLA   	KROD
+HOLA   	KROD
+hola   	krod
+hola   	krod
+HOLA   	KROD
+Krod   	Haxm
+KROD   	HOLA
+krod   	taxm
+krod   	taxm
+krod   	hola
+Krod   	Hola

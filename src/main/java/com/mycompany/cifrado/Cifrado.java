@@ -42,15 +42,18 @@ public class  Cifrado{
     public static void Cifrar() {
         Scanner lector = new Scanner(System.in);
         System.out.println("Ingrese el texto que quiere cifrar");
-        String txt = lector.nextLine().toUpperCase();
+        String txt = lector.nextLine();
         System.out.println("Ingrese la clave para cifrar");
         int cl = lector.nextInt();
         StringBuilder txtC = new StringBuilder();
         for (int i = 0; i < txt.length(); i++) {
             char c = txt.charAt(i);
-            if (Character.isLetter(c)) {
+            if (Character.isUpperCase(c)) {
                 char cif = (char) ((c +(cl-65)) % 26 + 65);
                 txtC.append(cif);
+            }else if (Character.isLowerCase(c)){
+            char cif = (char)(((c +(cl-97)) % 26) + 97);
+            txtC.append(cif);     
             }else {
                 txtC.append(c); 
             }
@@ -62,16 +65,19 @@ public class  Cifrado{
     public static void Descifrar() {
         Scanner lector = new Scanner(System.in);
         System.out.println("Ingrese el texto que quiere descifrar:");
-        String txt = lector.nextLine().toUpperCase();
+        String txt = lector.nextLine();
         System.out.println("Ingrese la clave para cifrar");
         int cl = lector.nextInt();
         StringBuilder txtC = new StringBuilder();
         for (int i = 0; i < txt.length(); i++) {
             char c = txt.charAt(i);
-            if (Character.isLetter(c)) {
+            if (Character.isUpperCase(c)) {     
                 char des = (char) ((c -(cl-65)) % 26 + 65);
                 txtC.append(des);
-            } else {
+            }else if (Character.isLowerCase(c)){
+            char cif = (char)(((c - (cl+97)) % 26) + 97);
+            txtC.append(cif);  
+            }else {
                 txtC.append(c);
             }
         }
