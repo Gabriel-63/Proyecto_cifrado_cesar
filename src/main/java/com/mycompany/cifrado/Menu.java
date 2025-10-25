@@ -43,6 +43,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtDescifrado = new javax.swing.JTextField();
         txtCifrado = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,9 +55,11 @@ public class Menu extends javax.swing.JFrame {
         jLabel1.setText("Cifrado Cesar ");
 
         jLabel2.setFont(new java.awt.Font("Arial Narrow", 2, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Ingrese su texto");
 
         jLabel3.setFont(new java.awt.Font("Arial Narrow", 2, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Ingrese la clave");
 
         txtTexto.setBackground(new java.awt.Color(32, 145, 216));
@@ -89,9 +92,11 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Arial Narrow", 2, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Texto decifrado");
 
         jLabel5.setFont(new java.awt.Font("Arial Narrow", 2, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Texto cifrado");
 
         txtDescifrado.setEditable(false);
@@ -109,6 +114,15 @@ public class Menu extends javax.swing.JFrame {
         txtCifrado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCifradoActionPerformed(evt);
+            }
+        });
+
+        jButton3.setBackground(new java.awt.Color(23, 84, 165));
+        jButton3.setFont(new java.awt.Font("Arial Narrow", 2, 14)); // NOI18N
+        jButton3.setText("Borrar datos");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -146,6 +160,10 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(169, 169, 169)
                         .addComponent(jLabel1)))
                 .addContainerGap(106, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(15, 15, 15))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,7 +190,9 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtDescifrado, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(19, 19, 19))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -220,6 +240,13 @@ public class Menu extends javax.swing.JFrame {
         cifrado=Descifrar(txt,cl);
         txtDescifrado.setText(cifrado);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        txtTexto.setText("");
+        clClave.setText("");
+        txtDescifrado.setText("");
+        txtCifrado.setText("");
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     public static String Cifrar(String txt, int cl) {
         StringBuilder txtC = new StringBuilder();
@@ -281,6 +308,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField clClave;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
