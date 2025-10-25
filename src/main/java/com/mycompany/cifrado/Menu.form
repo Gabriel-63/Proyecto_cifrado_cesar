@@ -123,7 +123,7 @@
                       <Component id="jLabel4" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                       <Component id="txtDescifrado" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="68" max="32767" attributes="0"/>
+                  <EmptySpace pref="96" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
